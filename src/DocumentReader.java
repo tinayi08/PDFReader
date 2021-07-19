@@ -19,7 +19,7 @@ public class DocumentReader {
 
     public void pdfReader () throws IOException {
         String returnString = "";
-        File pdfFile = new File("src/test.pdf");
+        File pdfFile = new File("/Users/tinayi/Documents/Java/test.pdf");
 
         PDDocument pdDoc = PDDocument.load(pdfFile);
         String stripper = new PDFTextStripper().getText(pdDoc);

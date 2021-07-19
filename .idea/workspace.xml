@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95f96ba-6cdf-4aee-837d-a1b5a7275c16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DocumentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
