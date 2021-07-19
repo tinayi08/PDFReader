@@ -19,9 +19,6 @@ public class DocumentReader {
 
     public void pdfReader () throws IOException {
         String returnString = "";
-        //String strStartIdentifier = "Daily Business Report";
-        //String strEndIdentifier = "days";
-        //PDFTextStripper pdfStripper = null;
         File pdfFile = new File("src/test.pdf");
 
         PDDocument pdDoc = PDDocument.load(pdfFile);
@@ -31,11 +28,6 @@ public class DocumentReader {
         if (!pdDoc.isEncrypted()) {
             PDFTextStripperByArea tStripper = new PDFTextStripperByArea();
             tStripper.setSortByPosition(true);
-            String pdfFileInText = tStripper.getText(pdDoc);
-
-            //int startIndex = pdfFileInText.indexOf(strStartIdentifier);
-            //int endIndex = pdfFileInText.indexOf(strEndIdentifier);
-
             returnString = stripper.substring(0, end+4);
             System.out.println(returnString);
         }
