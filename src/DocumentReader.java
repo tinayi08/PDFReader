@@ -1,5 +1,3 @@
-import org.apache.pdfbox.cos.COSDocument;
-import org.apache.pdfbox.io.RandomAccessRead;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
@@ -7,29 +5,30 @@ import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.text.PDFTextStripperByArea;
-import org.apache.pdfbox.tools.ExportFDF;
-import org.apache.pdfbox.tools.PrintPDF;
-import org.apache.pdfbox.tools.TextToPDF;
 
-import javax.swing.text.Document;
 import java.awt.*;
 import java.io.*;
 
 public class DocumentReader {
 
     String returnString;
+    File[] listOfFiles;
+
     //TODO - create an output file
     //TODO - create a loop so it goes file to file
     //TODO - Path name from another method too? pass through as a parameter?
     public DocumentReader() throws Exception {
-        pdfReader("days");
+        //pdfReader("days");
+        fileName();
+        fileLoop();
         createTextFile();
         testCreatePDF();
+
     }
 
-    public String pdfReader (String endText) throws IOException {
+    public String pdfReader (String endText, String fileName) throws IOException {
         //String returnString = "";
-        File pdfFile = new File("/Users/tinayi/Documents/Java/test.pdf");
+        File pdfFile = new File("/Users/tinayi/Documents/Java/TestFiles/" + fileName);
 
 
         PDDocument pdDoc = PDDocument.load(pdfFile);
@@ -46,16 +45,14 @@ public class DocumentReader {
 
         return returnString;
 
-
-
-
     }
 
     public void createTextFile() throws IOException {
+        //TODO - Need to create a loop or something so i can have new file names
         FileWriter out = null;
 
         try {
-            out = new FileWriter("/Users/tinayi/Documents/Java/test5.txt");
+            out = new FileWriter("/Users/tinayi/Documents/Java/NewFile/test5.txt");
             out.write(returnString);
         } catch (IOException e) {
             e.printStackTrace();
@@ -69,8 +66,11 @@ public class DocumentReader {
     public void testCreatePDF() throws Exception {
 
         String text = returnString.replace("\n", "n").replace("\r", "r");
+
         try {
-            String fileName = "/Users/tinayi/Documents/Java/test3.pdf";
+            //TODO - Need to create a loop or something so i can have new file names
+            //String fileName = "/Users/tinayi/Documents/Java/" + file; --- need to change file extension for output
+            String fileName = "/Users/tinayi/Documents/Java/NewFile/test3.pdf";
             PDDocument doc = new PDDocument();
             PDPage page = new PDPage();
 
@@ -79,11 +79,9 @@ public class DocumentReader {
 
             content.beginText();
 
-
             content.setFont(PDType1Font.COURIER, 5);
             content.setNonStrokingColor(Color.BLACK);
             content.newLineAtOffset(20,750);
-
 
             content.showText(text);
 
@@ -95,4 +93,28 @@ public class DocumentReader {
             e.printStackTrace();
         }
     }
+
+    public File[] fileName() {
+
+        File folder = new File("/Users/tinayi/Documents/Java/TestFiles");
+        listOfFiles = folder.listFiles();
+
+
+        return listOfFiles;
+
+    }
+
+    public void fileLoop() throws Exception {
+
+        for (File file : listOfFiles) {
+            if (file.isFile()) {
+
+                pdfReader("days", file.getName());
+                //System.out.println(file.getName());
+            }
+        }
+
+    }
+
+
 }
