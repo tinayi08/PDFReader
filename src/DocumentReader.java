@@ -23,13 +23,14 @@ public class DocumentReader {
     //TODO - Path name from another method too? pass through as a parameter?
     public DocumentReader() throws Exception {
         pdfReader("days");
+        createTextFile();
         testCreatePDF();
     }
 
     public String pdfReader (String endText) throws IOException {
         //String returnString = "";
         File pdfFile = new File("/Users/tinayi/Documents/Java/test.pdf");
-        FileWriter out = null;
+
 
         PDDocument pdDoc = PDDocument.load(pdfFile);
         String stripper = new PDFTextStripper().getText(pdDoc);
@@ -40,21 +41,29 @@ public class DocumentReader {
             PDFTextStripperByArea tStripper = new PDFTextStripperByArea();
             tStripper.setSortByPosition(true);
             returnString = stripper.substring(0, end+length);
-            System.out.println(returnString);
+            //System.out.println(returnString);
         }
 
         return returnString;
 
 
-//        try {
-//            out = new FileWriter("/Users/tinayi/Documents/Java/test1.txt");
-//            out.write(returnString);
-//        } finally {
-//            if (out != null) {
-//                out.close();
-//            }
-//        }
 
+
+    }
+
+    public void createTextFile() throws IOException {
+        FileWriter out = null;
+
+        try {
+            out = new FileWriter("/Users/tinayi/Documents/Java/test5.txt");
+            out.write(returnString);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (out != null) {
+                out.close();
+            }
+        }
     }
 
     public void testCreatePDF() throws Exception {
