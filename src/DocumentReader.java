@@ -20,24 +20,26 @@ public class DocumentReader {
     String returnString;
     //TODO - create an output file
     //TODO - create a loop so it goes file to file
+    //TODO - Path name from another method too? pass through as a parameter?
     public DocumentReader() throws Exception {
-        pdfReader();
+        pdfReader("days");
         testCreatePDF();
     }
 
-    public String pdfReader () throws IOException {
+    public String pdfReader (String endText) throws IOException {
         //String returnString = "";
         File pdfFile = new File("/Users/tinayi/Documents/Java/test.pdf");
         FileWriter out = null;
 
         PDDocument pdDoc = PDDocument.load(pdfFile);
         String stripper = new PDFTextStripper().getText(pdDoc);
-        int end = stripper.indexOf("days");
+        int end = stripper.indexOf(endText);
+        int length = endText.length();
         pdDoc.getClass();
         if (!pdDoc.isEncrypted()) {
             PDFTextStripperByArea tStripper = new PDFTextStripperByArea();
             tStripper.setSortByPosition(true);
-            returnString = stripper.substring(0, end+4);
+            returnString = stripper.substring(0, end+length);
             System.out.println(returnString);
         }
 
@@ -56,6 +58,8 @@ public class DocumentReader {
     }
 
     public void testCreatePDF() throws Exception {
+
+        String text = returnString.replace("\n", "n").replace("\r", "r");
         try {
             String fileName = "/Users/tinayi/Documents/Java/test3.pdf";
             PDDocument doc = new PDDocument();
@@ -66,10 +70,14 @@ public class DocumentReader {
 
             content.beginText();
 
-            content.setFont(PDType1Font.COURIER, 9);
+
+            content.setFont(PDType1Font.COURIER, 5);
             content.setNonStrokingColor(Color.BLACK);
             content.newLineAtOffset(20,750);
-            content.showText("Testing");
+
+
+            content.showText(text);
+
             content.endText();
             content.close();
             doc.save(fileName);
