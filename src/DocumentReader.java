@@ -10,7 +10,7 @@ import java.io.*;
 
 public class DocumentReader {
 
-    String returnString;
+    private String returnString;
     //File[] listOfFiles;
 
 
@@ -18,10 +18,6 @@ public class DocumentReader {
     //TODO - Path name from another method too? pass through as a parameter?
     //TODO - access modifiers
     public DocumentReader() throws Exception {
-
-//        fileName();
-//        fileLoop();
-
 
 
     }
@@ -106,31 +102,6 @@ public class DocumentReader {
 //            }
         }
     }
-
-//    public File[] fileName() {
-//
-//        File folder = new File("/Users/tinayi/Documents/Java/TestFiles");
-//        listOfFiles = folder.listFiles();
-//
-//        return listOfFiles;
-//    }
-//
-//    public void fileLoop() throws Exception {
-//        for (File file : listOfFiles) {
-//            if (file.isFile() && file.getName() != ".DS_Store") {
-//                pdfReader("days", file.getName());
-//                createTextFile(removeExtensionFromFileName(file.getName()));
-//                testCreatePDF(file.getName());
-//                //System.out.println(file.getName());
-//            }
-//        }
-//
-//    }
-//
-//    public String removeExtensionFromFileName(String fileName) {
-//        String newFileName = fileName.substring(0, fileName.length()-4);
-//        return newFileName;
-//    }
 
 
 }

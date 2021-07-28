@@ -1,11 +1,10 @@
-import javax.swing.text.Document;
 import java.io.File;
 
 public class FileClass {
 
 
-    File[] listOfFiles;
-    DocumentReader docReader;
+    private File[] listOfFiles;
+    private DocumentReader docReader;
 
     public FileClass() throws Exception {
         docReader = new DocumentReader();
@@ -13,12 +12,12 @@ public class FileClass {
         System.out.println("Program end");
     }
 
-    public void runProgram() throws Exception {
+    private void runProgram() throws Exception {
         fileName();
         fileLoop();
     }
 
-    public File[] fileName() {
+    private File[] fileName() {
 
         File folder = new File("/Users/tinayi/Documents/Java/TestFiles");
         listOfFiles = folder.listFiles();
@@ -26,7 +25,7 @@ public class FileClass {
         return listOfFiles;
     }
 
-    public void fileLoop() throws Exception {
+    private void fileLoop() throws Exception {
         for (File file : listOfFiles) {
             if (file.isFile() && file.getName() != ".DS_Store") {
 
@@ -39,7 +38,7 @@ public class FileClass {
 
     }
 
-    public String removeExtensionFromFileName(String fileName) {
+    private String removeExtensionFromFileName(String fileName) {
         String newFileName = fileName.substring(0, fileName.length()-4);
         return newFileName;
     }
