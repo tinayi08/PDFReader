@@ -11,14 +11,8 @@ import java.io.*;
 public class DocumentReader {
 
     private String returnString;
-    //File[] listOfFiles;
 
-
-    //TODO - create an output file
-    //TODO - Path name from another method too? pass through as a parameter?
-    //TODO - access modifiers
     public DocumentReader() throws Exception {
-
 
     }
 
