@@ -10,7 +10,7 @@ import java.io.*;
 
 public class DocumentReader {
 
-    private String returnString;
+    String returnString;
 
     public DocumentReader() throws Exception {
 
@@ -42,59 +42,6 @@ public class DocumentReader {
         }
 
         return returnString;
-    }
-
-
-    public void createTextFile(String fileName) throws IOException {
-        FileWriter out = null;
-        try {
-            out = new FileWriter("/Users/tinayi/Documents/Java/NewFile/" + fileName + ".txt");
-            out.write(returnString);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (out != null) {
-                out.close();
-            }
-        }
-    }
-
-    public void testCreatePDF(String fileName) throws Exception {
-
-        //String text = returnString.replace("\n", "<br>");
-
-        //String text = returnString.trim();
-        PDDocument doc = null;
-        try {
-            //TODO - Need to create a loop or something so i can have new file names
-
-            String path = "/Users/tinayi/Documents/Java/NewFile/" + fileName;
-            doc = new PDDocument();
-            PDPage page = new PDPage();
-
-            doc.addPage(page);
-            PDPageContentStream content = new PDPageContentStream(doc, page);
-
-            content.beginText();
-
-            content.setFont(PDType1Font.COURIER, 5);
-            content.setNonStrokingColor(Color.BLACK);
-            content.newLineAtOffset(20,750);
-
-            //content.showText(text);
-            content.showText(returnString);
-
-            content.endText();
-            content.close();
-            doc.save(path);
-            doc.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-//        } finally {
-//            if (doc != null) {
-//                doc.close();
-//            }
-        }
     }
 
 
