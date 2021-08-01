@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a95f96ba-6cdf-4aee-837d-a1b5a7275c16" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/DocumentReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/DocumentReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/DocumentWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/FileClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DocumentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/PDFWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/PDFWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/RunFiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/RunFiles.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PDFWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PDFWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RunFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TextFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextFileWriter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

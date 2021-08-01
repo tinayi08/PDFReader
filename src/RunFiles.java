@@ -37,8 +37,8 @@ public class RunFiles {
             if (file.isFile() && file.getName().endsWith(".pdf")) {
 
                 textFileWriter.reader.pdfReader("days", file.getName());
-                textFileWriter.createTextFile(removeExtensionFromFileName(file.getName()));
-                //textFileWriter.testCreatePDF(file.getName());
+                //textFileWriter.createTextFile(removeExtensionFromFileName(file.getName()));
+
 
 
             }
