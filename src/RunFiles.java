@@ -22,7 +22,7 @@ public class RunFiles {
 
     private File[] fileName() {
 
-        File folder = new File("/Users/tinayi/Documents/Java/TestFiles");
+        File folder = new File("/Users/" + System.getProperty("user.name")+ "/Documents/Java/TestFiles");
         listOfFiles = folder.listFiles();
 
         return listOfFiles;
