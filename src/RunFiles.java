@@ -29,8 +29,12 @@ public class RunFiles {
     }
 
     private void fileLoop() throws Exception {
+
+        if (listOfFiles == null || listOfFiles.length == 0)
+            return;
+
         for (File file : listOfFiles) {
-            if (file.isFile() && file.getName() != ".DS_Store") {
+            if (file.isFile() && file.getName().endsWith(".pdf")) {
 
                 textFileWriter.reader.pdfReader("days", file.getName());
                 textFileWriter.createTextFile(removeExtensionFromFileName(file.getName()));
@@ -40,6 +44,7 @@ public class RunFiles {
             }
         }
 
+        textFileWriter.reader.closePDFDoc();
     }
 
     private String removeExtensionFromFileName(String fileName) {
