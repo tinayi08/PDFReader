@@ -1,15 +1,18 @@
 import java.io.File;
 
-public class FileClass {
+public class RunFiles {
 
 
     private File[] listOfFiles;
     private TextFileWriter textFileWriter;
+    private PDFWriter pdfWriter;
 
-    public FileClass() throws Exception {
+    public RunFiles() throws Exception {
+        String userName = System.getProperty("user.name");
+        System.out.println("userName is " + userName);
         textFileWriter = new TextFileWriter();
         runProgram();
-        System.out.println("Program end");
+        System.out.println("program end");
     }
 
     private void runProgram() throws Exception {
@@ -31,7 +34,8 @@ public class FileClass {
 
                 textFileWriter.reader.pdfReader("days", file.getName());
                 textFileWriter.createTextFile(removeExtensionFromFileName(file.getName()));
-                textFileWriter.testCreatePDF(file.getName());
+                //textFileWriter.testCreatePDF(file.getName());
+
 
             }
         }
