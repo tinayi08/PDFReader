@@ -11,9 +11,29 @@ import java.io.*;
 public class DocumentReader {
 
     String returnString;
+    String writingPDFFilePath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/TestFiles/";
+    String pdfDocName = "";
+    String titleStr = "Site Monthly Report";
+    String reportMonth = "";
+    String warningText = "";
+    static private PDFWriter pdfWriter;
 
     public DocumentReader() throws Exception {
+        reportMonth = "June 2021";
+        titleStr = titleStr + " for " + reportMonth;
+        warningText = "Confidential";
+        pdfDocName = writingPDFFilePath + "NewFile.pdf";
+        pdfWriter = new PDFWriter(pdfDocName, titleStr, reportMonth, warningText);
 
+
+    }
+
+    public DocumentReader(String reportMonth, String titleStr, String warningText) {
+        this.reportMonth = reportMonth;
+        this.titleStr = titleStr;
+        this.warningText = warningText;
+        this.pdfDocName = writingPDFFilePath + "NewFile.pdf";
+        pdfWriter = new PDFWriter(pdfDocName, titleStr, reportMonth, warningText);
     }
 
     public String pdfReader (String endText, String fileName) throws IOException {

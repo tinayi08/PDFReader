@@ -37,7 +37,6 @@ public class DocumentWriter {
         //String text = returnString.trim();
         PDDocument doc = null;
         try {
-            //TODO - Need to create a loop or something so i can have new file names
 
             String path = "/Users/tinayi/Documents/Java/NewFile/" + fileName;
             doc = new PDDocument();
@@ -67,5 +66,8 @@ public class DocumentWriter {
 //            }
         }
     }
+
+
+    
 }
 

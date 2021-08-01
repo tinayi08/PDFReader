@@ -4,10 +4,10 @@ public class FileClass {
 
 
     private File[] listOfFiles;
-    private DocumentWriter writer;
+    private TextFileWriter textFileWriter;
 
     public FileClass() throws Exception {
-        writer = new DocumentWriter();
+        textFileWriter = new TextFileWriter();
         runProgram();
         System.out.println("Program end");
     }
@@ -29,9 +29,9 @@ public class FileClass {
         for (File file : listOfFiles) {
             if (file.isFile() && file.getName() != ".DS_Store") {
 
-                writer.reader.pdfReader("days", file.getName());
-                writer.createTextFile(removeExtensionFromFileName(file.getName()));
-                writer.testCreatePDF(file.getName());
+                textFileWriter.reader.pdfReader("days", file.getName());
+                textFileWriter.createTextFile(removeExtensionFromFileName(file.getName()));
+                textFileWriter.testCreatePDF(file.getName());
 
             }
         }
