@@ -12,6 +12,7 @@ public class DocumentReader {
 
     String returnString;
     String writingPDFFilePath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/NewFile/";
+    String fileReadingPath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/TestFiles/";
     String pdfDocName = "";
     String titleStr = "Site Monthly Report";
     String reportMonth = "";
@@ -41,7 +42,7 @@ public class DocumentReader {
     }
     public String pdfReader(String endText, String fileName) throws IOException {
         //String returnString = "";
-        File pdfFile = new File("/Users/" + System.getProperty("user.name") + "/Documents/Java/TestFiles/" + fileName);
+        File pdfFile = new File(fileReadingPath + fileName);
 
         PDDocument pdDoc = null;
 
