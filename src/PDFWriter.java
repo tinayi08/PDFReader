@@ -4,7 +4,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import java.io.FileOutputStream;
 import java.util.Date;
 
-public class PDFFileWriter {
+public class PDFWriter {
 
 
     private static String PDFfileName;
@@ -24,7 +24,7 @@ public class PDFFileWriter {
 
     private static Document document = null;
 
-    public PDFWriter(String docName, String titleString, String reportMonth, String warningStr) {
+    public PDFWriter (String docName, String titleString, String reportMonth, String warningStr) {
 
         PDFfileName = docName;
         reportMonthYYYY = reportMonth;
@@ -59,13 +59,13 @@ public class PDFFileWriter {
     public void addANewSite (String contentStr) {
 
         try {
-            if (PDFFileWriter.document == null) {
+            if (PDFWriter.document == null) {
                 System.out.println("@@##@$@$@$#@#   document is null!!!  -- addANewSite");
             }
             if (contentStr == null) {
                 System.out.println("contentStr is null!!! --  addANewSite");
             }
-            addContent(PDFFileWriter.document, contentStr);
+            addContent(PDFWriter.document, contentStr);
             //document.newPage();
         } catch (DocumentException e) {
             // TODO Auto-generated catch block

@@ -8,11 +8,11 @@ import java.awt.*;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class DocumentWriter {
+public class TextFileWriter {
 
     DocumentReader reader;
 
-    public DocumentWriter() throws Exception {
+    public TextFileWriter() throws Exception {
         reader = new DocumentReader();
 
     }
@@ -68,6 +68,6 @@ public class DocumentWriter {
     }
 
 
-    
+
 }
 
