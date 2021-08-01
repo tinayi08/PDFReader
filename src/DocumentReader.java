@@ -36,7 +36,10 @@ public class DocumentReader {
         pdfWriter = new PDFWriter(pdfDocName, titleStr, reportMonth, warningText);
     }
 
-    public String pdfReader (String endText, String fileName) throws IOException {
+    public void closePDFDoc() {
+        pdfWriter.closeDocument();
+    }
+    public String pdfReader(String endText, String fileName) throws IOException {
         //String returnString = "";
         File pdfFile = new File("/Users/tinayi/Documents/Java/TestFiles/" + fileName);
 
