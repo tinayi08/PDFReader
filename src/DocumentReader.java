@@ -41,7 +41,7 @@ public class DocumentReader {
     }
     public String pdfReader(String endText, String fileName) throws IOException {
         //String returnString = "";
-        File pdfFile = new File("/Users/tinayi/Documents/Java/TestFiles/" + fileName);
+        File pdfFile = new File(writingPDFFilePath + fileName);
 
         PDDocument pdDoc = null;
 
@@ -55,7 +55,7 @@ public class DocumentReader {
                 PDFTextStripperByArea tStripper = new PDFTextStripperByArea();
                 tStripper.setSortByPosition(true);
                 returnString = stripper.substring(0, end+length);
-                //System.out.println(returnString);
+                pdfWriter.addANewSite(returnString);
             }
         } finally {
             if (pdDoc != null) {
