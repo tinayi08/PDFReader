@@ -2,7 +2,7 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>Config Info</comment>
-<entry key="initDir">/Users/tinayi/Documents/Java/TestFiles</entry>
+<entry key="initDir">/Users/tinayi/Documents/Java/TestFiles/1</entry>
 <entry key="outputFilePostFix">AllSiteSummeryReport</entry>
 <entry key="warning">This document is HIGHLY CONFIDENTIAL and it should be handle accordingly!</entry>
 </properties>

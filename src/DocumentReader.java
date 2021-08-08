@@ -12,7 +12,7 @@ public class DocumentReader {
 
     String returnString;
     String writingPDFFilePath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/NewFile/";
-    String fileReadingPath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/TestFiles/";
+    //String fileReadingPath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/TestFiles/";
     String pdfDocName = "";
     String titleStr = "Site Monthly Report";
     String reportMonth = "";
@@ -41,9 +41,9 @@ public class DocumentReader {
     public void closePDFDoc() {
         pdfWriter.closeDocument();
     }
-    public String pdfReader(String endText, String fileName) throws IOException {
+    public String pdfReader(String endText, String fileName, String filePath) throws IOException {
         //String returnString = "";
-        File pdfFile = new File(fileReadingPath + fileName);
+        File pdfFile = new File(filePath + "/" + fileName);
 
         PDDocument pdDoc = null;
 
