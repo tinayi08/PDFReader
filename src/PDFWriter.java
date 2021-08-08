@@ -119,6 +119,42 @@ public class PDFWriter {
         System.out.println("Site Page added on PDF file ******************");
     }
 
+//    private void addContentOneLocation (Document document, String contentStr) throws DocumentException {
+//
+//        System.out.println(contentStr);
+//        Paragraph preface = new Paragraph(contentStr, smallFont8);
+//        document.add(preface);
+//        document.newPage();
+//        System.out.println("Site Page added on PDF file ******************");
+//    }
+//
+//    public void createPDFDoc(String fileName, String reportMonth, String titleString, String contentStr) {
+//
+//        PDFfileName = fileName;
+//        reportMonthYYYY = reportMonth;
+//
+//        try {
+//            if (document == null) {
+//                document = new Document(PageSize.LETTER, 25f, 25f, 40f, 0f);
+//
+//                if (PDFfileName == null) {
+//                    System.out.println("***PDFfileName is NULL");
+//                } else
+//                    System.out.println("PDFfileName is " + PDFfileName);
+//
+//                PdfWriter.getInstance(document, new FileOutputStream(PDFfileName));
+//                document.open();
+//                addMetaData(document, titleString);
+//                addContentOneLocation(document, contentStr);
+//
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            document.close();
+//        }
+//    }
+
 
     /**
      * This is used in the title page

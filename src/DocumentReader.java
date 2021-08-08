@@ -19,6 +19,7 @@ public class DocumentReader {
     String warningText = "";
     static private PDFWriter pdfWriter;
 
+
     public DocumentReader() throws Exception {
         reportMonth = "June 2021";
         titleStr = titleStr + " for " + reportMonth;

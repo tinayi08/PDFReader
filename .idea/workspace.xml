@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95f96ba-6cdf-4aee-837d-a1b5a7275c16" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/configuration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ConfigXMLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MonthlySiteSummeryReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SymbolMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/DocumentReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/DocumentReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PDFReader/PDFWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/PDFWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/RunFiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/RunFiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/TextFileWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/TextFileWriter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DocumentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PDFWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PDFWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RunFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TextFileWriter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -50,13 +55,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/out" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.MonthlySiteSummeryReport">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="PDFReader" />
@@ -64,8 +72,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MonthlySiteSummeryReport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MonthlySiteSummeryReport" />
+      <module name="PDFReader" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MonthlySiteSummeryReport" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
