@@ -1,12 +1,6 @@
 package DocumentProcesser;
 
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
-import javax.swing.text.Document;
-import java.awt.*;
 import java.io.FileWriter;
 import java.io.IOException;
 

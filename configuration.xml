@@ -3,6 +3,6 @@
 <properties>
 <comment>Config Info</comment>
 <entry key="initDir">/Users/tinayi/Documents/Java/TestFiles/</entry>
-<entry key="outputFilePostFix">AllSiteSummeryReport</entry>
+<entry key="outputFilePostFix">AllSiteSummaryReport</entry>
 <entry key="warning">This document is HIGHLY CONFIDENTIAL and it should be handle accordingly!</entry>
 </properties>
