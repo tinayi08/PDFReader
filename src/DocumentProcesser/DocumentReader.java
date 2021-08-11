@@ -20,10 +20,9 @@ public class DocumentReader {
 
 
     public DocumentReader(String reportMonth) throws Exception {
-        //reportMonth = "June 2021";
         titleStr = titleStr + " for " + reportMonth;
         warningText = "Confidential";
-        pdfDocName = writingPDFFilePath + "NewFile.pdf";
+        pdfDocName = writingPDFFilePath + reportMonth + "_NewFile.pdf";
         pdfWriter = new PDFWriter(pdfDocName, titleStr, reportMonth, warningText);
 
 

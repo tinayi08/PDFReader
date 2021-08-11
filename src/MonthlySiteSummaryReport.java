@@ -34,7 +34,7 @@ import java.awt.event.FocusEvent;
 
 public class MonthlySiteSummaryReport {
 
-	private JFrame frmGorentalsMontlySummary;
+	private JFrame frmGoRentalsMonthlySummary;
 	private JTextField strReportMonthYYYY;
 	private final Action action = new SwingAction();
 	private final Action action_1 = new SwingAction_1();
@@ -75,7 +75,7 @@ public class MonthlySiteSummaryReport {
 					}
 					System.out.println("Warning String is >" + warningString + "<");
 					MonthlySiteSummaryReport window = new MonthlySiteSummaryReport();
-					window.frmGorentalsMontlySummary.setVisible(true);
+					window.frmGoRentalsMonthlySummary.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -96,14 +96,14 @@ public class MonthlySiteSummaryReport {
 	private void initialize() {
 		reportingMonth = null;
 		
-		frmGorentalsMontlySummary = new JFrame();
-		frmGorentalsMontlySummary.setTitle("GoRentals Monthly Summary Report Generator");
-		frmGorentalsMontlySummary.setBounds(100, 100, 589, 307);
-		frmGorentalsMontlySummary.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmGoRentalsMonthlySummary = new JFrame();
+		frmGoRentalsMonthlySummary.setTitle("GoRentals Monthly Summary Report Generator");
+		frmGoRentalsMonthlySummary.setBounds(100, 100, 589, 307);
+		frmGoRentalsMonthlySummary.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel mainPanel = new JPanel();
 		mainPanel.setBackground(new Color(240, 255, 240));
-		frmGorentalsMontlySummary.getContentPane().add(mainPanel, BorderLayout.CENTER);
+		frmGoRentalsMonthlySummary.getContentPane().add(mainPanel, BorderLayout.CENTER);
 		
 		final JButton btnRunReport = new JButton("Run Report");
 		JLabel lblReportMonthYYYY = new JLabel("Report Month (Month and Year):");
@@ -137,7 +137,7 @@ public class MonthlySiteSummaryReport {
 			public void mouseClicked(MouseEvent e) {
 				System.out.println("Cancel button pressed!");
 				JOptionPane.showMessageDialog(null, "A Cancel button is pressed,  Application will terminate with no report!");
-				frmGorentalsMontlySummary.dispose();
+				frmGoRentalsMonthlySummary.dispose();
 				System.exit(0);
 			}
 		});
