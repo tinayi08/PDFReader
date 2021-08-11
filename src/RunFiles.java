@@ -1,10 +1,13 @@
+import DocumentProcesser.PDFWriter;
+import DocumentProcesser.TextFileWriter;
+
 import java.io.File;
 
 public class RunFiles {
 
 
     private File[] listOfFiles;
-    private TextFileWriter textFileWriter;
+    public TextFileWriter textFileWriter;
     private PDFWriter pdfWriter;
 
     public RunFiles(String filePath) throws Exception {

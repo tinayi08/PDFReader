@@ -1,11 +1,10 @@
+package DocumentProcesser;
+
+import DocumentProcesser.PDFWriter;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDPage;
-import org.apache.pdfbox.pdmodel.PDPageContentStream;
-import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.text.PDFTextStripperByArea;
 
-import java.awt.*;
 import java.io.*;
 
 public class DocumentReader {
@@ -43,7 +42,15 @@ public class DocumentReader {
     }
     public String pdfReader(String endText, String fileName, String filePath) throws IOException {
         //String returnString = "";
-        File pdfFile = new File(filePath + "/" + fileName);
+        //TODO - filePath should check to see if file directory ends in / or not
+        StringBuilder path = new StringBuilder(filePath);
+        if (filePath.endsWith("/")) {
+            path.append(fileName);
+
+        } else
+            path.append("/").append(fileName);
+
+        File pdfFile = new File(path.toString());
 
         PDDocument pdDoc = null;
 

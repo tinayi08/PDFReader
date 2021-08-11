@@ -1,3 +1,5 @@
+import XML.ConfigXMLParser;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -17,7 +19,7 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.LayoutStyle.ComponentPlacement;
 
-//import XML.ConfigXMLParser;
+//import XML.XML.ConfigXMLParser;
 
 import java.awt.Color;
 //import javax.swing.AbstractAction;

@@ -1,3 +1,5 @@
+package DocumentProcesser;
+
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -10,7 +12,7 @@ import java.io.IOException;
 
 public class TextFileWriter {
 
-    DocumentReader reader;
+    public DocumentReader reader;
 
     public TextFileWriter() throws Exception {
         reader = new DocumentReader();
