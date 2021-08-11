@@ -169,7 +169,7 @@ public class MonthlySiteSummaryReport {
 //				   JOptionPane.showMessageDialog(null, "Report Created!  \nThere are " + numberOfFilesRead +
 //						   " sites included", "INFORMATION",  JOptionPane.INFORMATION_MESSAGE);
 				try {
-					RunFiles run = new RunFiles(workDirName);
+					RunFiles run = new RunFiles(workDirName, reportingMonth);
 				} catch (Exception exception) {
 					exception.printStackTrace();
 				}

@@ -47,7 +47,9 @@ public class PDFWriter {
             }
         } catch (Exception e) {
             e.printStackTrace();
+
         }
+
     }
 
     public void closeDocument() {

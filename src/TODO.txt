@@ -1,0 +1,4 @@
+-Figure out how to un-hardcode the month
+-Enter custom save as file name
+-be able to run one file then next one without having to close program - something to do when when doc.close() is called
+-Update private/public

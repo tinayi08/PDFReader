@@ -19,8 +19,8 @@ public class DocumentReader {
     static private PDFWriter pdfWriter;
 
 
-    public DocumentReader() throws Exception {
-        reportMonth = "June 2021";
+    public DocumentReader(String reportMonth) throws Exception {
+        //reportMonth = "June 2021";
         titleStr = titleStr + " for " + reportMonth;
         warningText = "Confidential";
         pdfDocName = writingPDFFilePath + "NewFile.pdf";
@@ -42,7 +42,6 @@ public class DocumentReader {
     }
     public String pdfReader(String endText, String fileName, String filePath) throws IOException {
         //String returnString = "";
-        //TODO - filePath should check to see if file directory ends in / or not
         StringBuilder path = new StringBuilder(filePath);
         if (filePath.endsWith("/")) {
             path.append(fileName);

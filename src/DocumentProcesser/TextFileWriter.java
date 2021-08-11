@@ -8,8 +8,8 @@ public class TextFileWriter {
 
     public DocumentReader reader;
 
-    public TextFileWriter() throws Exception {
-        reader = new DocumentReader();
+    public TextFileWriter(String reportMonth) throws Exception {
+        reader = new DocumentReader(reportMonth);
 
     }
 

@@ -10,10 +10,10 @@ public class RunFiles {
     public TextFileWriter textFileWriter;
     private PDFWriter pdfWriter;
 
-    public RunFiles(String filePath) throws Exception {
+    public RunFiles(String filePath, String reportMonth) throws Exception {
         String userName = System.getProperty("user.name");
         System.out.println("userName is " + userName);
-        textFileWriter = new TextFileWriter();
+        textFileWriter = new TextFileWriter(reportMonth);
         runProgram(filePath);
         System.out.println("program end");
     }
@@ -21,6 +21,7 @@ public class RunFiles {
     private void runProgram(String filePath) throws Exception {
         fileName(filePath);
         fileLoop(filePath);
+
     }
 
     private File[] fileName() {
