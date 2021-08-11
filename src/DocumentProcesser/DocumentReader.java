@@ -25,7 +25,6 @@ public class DocumentReader {
         pdfDocName = writingPDFFilePath + reportMonth + "_NewFile.pdf";
         pdfWriter = new PDFWriter(pdfDocName, titleStr, reportMonth, warningText);
 
-
     }
 
     public DocumentReader(String reportMonth, String titleStr, String warningText) {
