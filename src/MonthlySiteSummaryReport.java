@@ -32,9 +32,9 @@ import java.io.File;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
-public class MonthlySiteSummeryReport {
+public class MonthlySiteSummaryReport {
 
-	private JFrame frmGorentalMontlySummery;
+	private JFrame frmGorentalsMontlySummary;
 	private JTextField strReportMonthYYYY;
 	private final Action action = new SwingAction();
 	private final Action action_1 = new SwingAction_1();
@@ -74,8 +74,8 @@ public class MonthlySiteSummeryReport {
 						System.out.println("warning string is not configured properly in configuration.xml file!");
 					}
 					System.out.println("Warning String is >" + warningString + "<");
-					MonthlySiteSummeryReport window = new MonthlySiteSummeryReport();
-					window.frmGorentalMontlySummery.setVisible(true);
+					MonthlySiteSummaryReport window = new MonthlySiteSummaryReport();
+					window.frmGorentalsMontlySummary.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -86,7 +86,7 @@ public class MonthlySiteSummeryReport {
 	/**
 	 * Create the application.
 	 */
-	public MonthlySiteSummeryReport() {
+	public MonthlySiteSummaryReport() {
 		initialize();
 	}
 
@@ -96,14 +96,14 @@ public class MonthlySiteSummeryReport {
 	private void initialize() {
 		reportingMonth = null;
 		
-		frmGorentalMontlySummery = new JFrame();
-		frmGorentalMontlySummery.setTitle("GoRental Monthly Summery Report Generator");
-		frmGorentalMontlySummery.setBounds(100, 100, 589, 307);
-		frmGorentalMontlySummery.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmGorentalsMontlySummary = new JFrame();
+		frmGorentalsMontlySummary.setTitle("GoRentals Monthly Summary Report Generator");
+		frmGorentalsMontlySummary.setBounds(100, 100, 589, 307);
+		frmGorentalsMontlySummary.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel mainPanel = new JPanel();
 		mainPanel.setBackground(new Color(240, 255, 240));
-		frmGorentalMontlySummery.getContentPane().add(mainPanel, BorderLayout.CENTER);
+		frmGorentalsMontlySummary.getContentPane().add(mainPanel, BorderLayout.CENTER);
 		
 		final JButton btnRunReport = new JButton("Run Report");
 		JLabel lblReportMonthYYYY = new JLabel("Report Month (Month and Year):");
@@ -137,7 +137,7 @@ public class MonthlySiteSummeryReport {
 			public void mouseClicked(MouseEvent e) {
 				System.out.println("Cancel button pressed!");
 				JOptionPane.showMessageDialog(null, "A Cancel button is pressed,  Application will terminate with no report!");
-				frmGorentalMontlySummery.dispose();
+				frmGorentalsMontlySummary.dispose();
 				System.exit(0);
 			}
 		});
@@ -217,7 +217,7 @@ public class MonthlySiteSummeryReport {
 		
 		
 		
-		JButton btnBrowsFolder = new JButton("Brows Folder");
+		JButton btnBrowsFolder = new JButton("Browse Folder");
 		btnBrowsFolder.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

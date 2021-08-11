@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95f96ba-6cdf-4aee-837d-a1b5a7275c16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/DocumentReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/DocumentReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConfigXMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/ConfigXMLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DocumentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentProcesser/DocumentReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonthlySiteSummeryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthlySiteSummeryReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PDFWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentProcesser/PDFWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RunFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SymbolMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/XML/SymbolMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TextFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentProcesser/TextFileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MonthlySiteSummeryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthlySiteSummaryReport.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +55,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MonthlySiteSummeryReport">
+  <component name="RunManager" selected="Application.MonthlySiteSummaryReport">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="PDFReader" />
@@ -72,8 +63,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MonthlySiteSummeryReport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MonthlySiteSummeryReport" />
+    <configuration name="MonthlySiteSummaryReport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MonthlySiteSummaryReport" />
       <module name="PDFReader" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,7 +72,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MonthlySiteSummeryReport" />
+        <item itemvalue="Application.MonthlySiteSummaryReport" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
