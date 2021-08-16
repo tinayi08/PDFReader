@@ -1,9 +1,11 @@
 TODO:
--Enter custom save as file name
+-Create field for file name in GUI
 -be able to run one file then next one without having to close program - something to do when when doc.close() is called
 -Update private/public
+-When selecting file to read files from. if you select the file twice, it is the incorrect path
 
 
 Done:
 -Figure out how to un-hardcode the month
 -Created packages
+-Added month to file name

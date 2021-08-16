@@ -35,11 +35,11 @@ import java.awt.event.FocusEvent;
 public class MonthlySiteSummaryReport {
 
 	private JFrame frmGoRentalsMonthlySummary;
-	private JTextField strReportMonthYYYY;
+	private JTextField strReportName;
 	private final Action action = new SwingAction();
 	private final Action action_1 = new SwingAction_1();
 	private JFileChooser chooser;
-	private static String reportingMonth;
+	private static String reportName;
 	private static ConfigXMLParser config;
 	private static String outFileMainName;
 	private static String workDirName; 
@@ -52,7 +52,7 @@ public class MonthlySiteSummaryReport {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					reportingMonth = null;
+					reportName = null;
 					config = new ConfigXMLParser("configuration.xml");
 					
 					// Get configured prefix for PDF output file name,  it will be appended with montly.
@@ -94,10 +94,10 @@ public class MonthlySiteSummaryReport {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		reportingMonth = null;
+		reportName = null;
 		
 		frmGoRentalsMonthlySummary = new JFrame();
-		frmGoRentalsMonthlySummary.setTitle("GoRentals Monthly Summary Report Generator");
+		frmGoRentalsMonthlySummary.setTitle("Go Rentals Monthly Summary Report Generator");
 		frmGoRentalsMonthlySummary.setBounds(100, 100, 589, 307);
 		frmGoRentalsMonthlySummary.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -106,17 +106,19 @@ public class MonthlySiteSummaryReport {
 		frmGoRentalsMonthlySummary.getContentPane().add(mainPanel, BorderLayout.CENTER);
 		
 		final JButton btnRunReport = new JButton("Run Report");
-		JLabel lblReportMonthYYYY = new JLabel("Report Month (Month and Year):");
+		JLabel lblReportName = new JLabel("Report Name:");
+		//JLabel lblReportName = new JLabel("Report Month (Month and Year):");
 		final JLabel textDirectorySelected = new JLabel(workDirName);
-		strReportMonthYYYY = new JTextField();
-		strReportMonthYYYY.addFocusListener(new FocusAdapter() {
+		strReportName = new JTextField();
+		strReportName.addFocusListener(new FocusAdapter() {
 			@Override
 			public void focusLost(FocusEvent e) {
-				reportingMonth = strReportMonthYYYY.getText();
-				pdfOutputFile = reportingMonth + "_" + outFileMainName + ".pdf";
+				reportName = strReportName.getText();
+				pdfOutputFile = reportName + ".pdf";
+				//pdfOutputFile = reportingMonth + "_" + outFileMainName + ".pdf";
 				//JOptionPane.showMessageDialog(null, reportingMonth + " report month entered");
 				//if (((reportingMonth != null) && (!reportingMonth.isEmpty())) && (directoryPath != null)) {
-				if (reportingMonth != null) {  // There is already a default directory...
+				if (reportName != null) {  // There is already a default directory...
 					//JOptionPane.showMessageDialog(null, "Directory and report month entered!");
 					btnRunReport.setEnabled(true);
 					
@@ -125,8 +127,8 @@ public class MonthlySiteSummaryReport {
 				}
 			}
 		});
-		strReportMonthYYYY.setBackground(new Color(72, 209, 204));
-		strReportMonthYYYY.setColumns(10);
+		strReportName.setBackground(new Color(72, 209, 204));
+		strReportName.setColumns(10);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(238, 232, 170));
@@ -149,7 +151,7 @@ public class MonthlySiteSummaryReport {
 				System.out.println("Run Report pressed!   Dir:" + workDirName); 
 				//JOptionPane.showMessageDialog(null, "Running Report:  Dir: >" + workDirName + "<  postfix: >" + reportingMonth + "<");
 				JOptionPane.showMessageDialog(null, "This will take bit of time to complete!\n working directory: \n" + workDirName, "ALERT MESSAGE",  JOptionPane.WARNING_MESSAGE);
-				   String outFileName = reportingMonth + "_" + outFileMainName;
+				   String outFileName = reportName + "_" + outFileMainName;
 				   
 				   //pdfOutputFile = outFileMainName + "All site Summery Report Report.pdf";
 				   //outFileName.len
@@ -169,7 +171,7 @@ public class MonthlySiteSummaryReport {
 //				   JOptionPane.showMessageDialog(null, "Report Created!  \nThere are " + numberOfFilesRead +
 //						   " sites included", "INFORMATION",  JOptionPane.INFORMATION_MESSAGE);
 				try {
-					RunFiles run = new RunFiles(workDirName, reportingMonth);
+					RunFiles run = new RunFiles(workDirName, reportName);
 				} catch (Exception exception) {
 					exception.printStackTrace();
 				}
@@ -190,9 +192,9 @@ public class MonthlySiteSummaryReport {
 							.addGap(18)
 							.addGroup(gl_mainPanel.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_mainPanel.createSequentialGroup()
-									.addComponent(lblReportMonthYYYY)
+									.addComponent(lblReportName)
 									.addGap(18)
-									.addComponent(strReportMonthYYYY, GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
+									.addComponent(strReportName, GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
 								.addComponent(panel, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE))
 							.addGap(22)))
 					.addContainerGap())
@@ -202,8 +204,8 @@ public class MonthlySiteSummaryReport {
 				.addGroup(gl_mainPanel.createSequentialGroup()
 					.addGap(30)
 					.addGroup(gl_mainPanel.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblReportMonthYYYY)
-						.addComponent(strReportMonthYYYY, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(lblReportName)
+						.addComponent(strReportName, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(18)
 					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 137, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
@@ -213,7 +215,7 @@ public class MonthlySiteSummaryReport {
 					.addContainerGap(20, Short.MAX_VALUE))
 		);
 		
-		JLabel lblFolderLocagtion = new JLabel("Run Report Folder Location:");
+		JLabel lblFolderLocation = new JLabel("Run Report Folder Location:");
 		
 		
 		
@@ -240,7 +242,7 @@ public class MonthlySiteSummaryReport {
 					System.out.println("File Directory:" + workDirName);
 					textDirectorySelected.setText(workDirName);
 					JOptionPane.showMessageDialog(null, workDirName + " is selected");
-					if (((reportingMonth != null) && (!reportingMonth.isEmpty())) && (reportingMonth != null)) {
+					if (((reportName != null) && (!reportName.isEmpty())) && (reportName != null)) {
 					btnRunReport.setEnabled(true);
 					}
 				}
@@ -260,7 +262,7 @@ public class MonthlySiteSummaryReport {
 					.addGap(18))
 				.addGroup(gl_panel.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(lblFolderLocagtion)
+					.addComponent(lblFolderLocation)
 					.addContainerGap(230, Short.MAX_VALUE))
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGap(46)
@@ -271,7 +273,7 @@ public class MonthlySiteSummaryReport {
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGap(12)
-					.addComponent(lblFolderLocagtion)
+					.addComponent(lblFolderLocation)
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(textDirectorySelected)
 					.addGap(22)

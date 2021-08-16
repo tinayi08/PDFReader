@@ -15,6 +15,7 @@ public class RunFiles {
         System.out.println("userName is " + userName);
         textFileWriter = new TextFileWriter(reportMonth);
         runProgram(filePath);
+        textFileWriter.reader.closePDFDoc();
         System.out.println("program end");
     }
 
@@ -56,7 +57,7 @@ public class RunFiles {
             }
         }
 
-        textFileWriter.reader.closePDFDoc();
+        //textFileWriter.reader.closePDFDoc();
     }
 
     private String removeExtensionFromFileName(String fileName) {
