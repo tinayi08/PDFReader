@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a95f96ba-6cdf-4aee-837d-a1b5a7275c16" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PDFReader/DocumentProcesser/DocumentReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/DocumentProcesser/DocumentReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/DocumentProcesser/TextFileWriter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/DocumentProcesser/TextFileWriter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$SwingAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$SwingAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$SwingAction_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport$SwingAction_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/MonthlySiteSummaryReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PDFReader/RunFiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PDFReader/RunFiles.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DocumentProcesser/DocumentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentProcesser/DocumentReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MonthlySiteSummaryReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MonthlySiteSummaryReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DocumentProcesser/PDFWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DocumentProcesser/PDFWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RunFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/TODO.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

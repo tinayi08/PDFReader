@@ -10,12 +10,12 @@ import java.io.*;
 public class DocumentReader {
 
     String returnString;
-    String writingPDFFilePath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/NewFile/";
+    private String writingPDFFilePath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/NewFile/";
     //String fileReadingPath = "/Users/" + System.getProperty("user.name") + "/Documents/Java/TestFiles/";
-    String pdfDocName = "";
-    String titleStr = "Site Monthly Report";
-    String reportMonth = "";
-    String warningText = "";
+    private String pdfDocName = "";
+    private String titleStr = "Site Monthly Report";
+    private String reportMonth = "";
+    private String warningText = "";
     static private PDFWriter pdfWriter;
 
 
@@ -40,6 +40,8 @@ public class DocumentReader {
     public void closePDFDoc() {
         pdfWriter.closeDocument();
     }
+
+
     public String pdfReader(String endText, String fileName, String filePath) throws IOException {
         //String returnString = "";
         StringBuilder path = new StringBuilder(filePath);
