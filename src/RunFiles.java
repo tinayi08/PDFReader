@@ -8,7 +8,7 @@ public class RunFiles {
 
 
     private File[] listOfFiles;
-    private PDFWriter pdfWriter;
+    //private PDFWriter pdfWriter;
     private DocumentReader docReader;
 
     public RunFiles(String filePath, String reportMonth) throws Exception {
@@ -27,14 +27,6 @@ public class RunFiles {
         fileName(filePath);
         fileLoop(filePath);
 
-    }
-
-    private File[] fileName() {
-
-        File folder = new File("/Users/" + System.getProperty("user.name")+ "/Documents/Java/TestFiles");
-        listOfFiles = folder.listFiles();
-
-        return listOfFiles;
     }
 
     private File[] fileName(String filePath) {
@@ -61,8 +53,4 @@ public class RunFiles {
         docReader.closePDFDoc();
     }
 
-    private String removeExtensionFromFileName(String fileName) {
-        String newFileName = fileName.substring(0, fileName.length()-4);
-        return newFileName;
-    }
 }
