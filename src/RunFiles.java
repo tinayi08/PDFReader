@@ -9,7 +9,7 @@ public class RunFiles {
 
     private File[] listOfFiles;
     private PDFWriter pdfWriter;
-    public DocumentReader docReader;
+    private DocumentReader docReader;
 
     public RunFiles(String filePath, String reportMonth) throws Exception {
         String userName = System.getProperty("user.name");
