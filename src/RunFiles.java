@@ -1,3 +1,4 @@
+import DocumentProcesser.DocumentReader;
 import DocumentProcesser.PDFWriter;
 import DocumentProcesser.TextFileWriter;
 
@@ -7,16 +8,19 @@ public class RunFiles {
 
 
     private File[] listOfFiles;
-    public TextFileWriter textFileWriter;
     private PDFWriter pdfWriter;
+    public DocumentReader docReader;
 
     public RunFiles(String filePath, String reportMonth) throws Exception {
         String userName = System.getProperty("user.name");
         System.out.println("userName is " + userName);
-        textFileWriter = new TextFileWriter(reportMonth);
+        docReader = new DocumentReader(reportMonth);
         runProgram(filePath);
         //textFileWriter.reader.closePDFDoc();
         System.out.println("program end");
+        //try putting close doc here
+
+        //open and close should be in this constructor
     }
 
     private void runProgram(String filePath) throws Exception {
@@ -49,15 +53,12 @@ public class RunFiles {
         for (File file : listOfFiles) {
             if (file.isFile() && file.getName().endsWith(".pdf")) {
 
-                textFileWriter.reader.pdfReader("days", file.getName(), filePath);
-                //textFileWriter.createTextFile(removeExtensionFromFileName(file.getName()));
-                //textFileWriter.reader.pdfWriter.createPDFDoc(file.getName(),"June 2021", "DBR", textFileWriter.reader.returnString);
-
+                docReader.pdfReader("days", file.getName(), filePath);
 
             }
         }
 
-        textFileWriter.reader.closePDFDoc();
+        docReader.closePDFDoc();
     }
 
     private String removeExtensionFromFileName(String fileName) {
