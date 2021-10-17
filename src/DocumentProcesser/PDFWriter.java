@@ -26,15 +26,19 @@ public class PDFWriter {
 
     private static Document document = null;
 
+
     public PDFWriter (String docName, String titleString, String reportMonth, String warningStr) {
 
         PDFfileName = docName;
         reportMonthYYYY = reportMonth;
         try {
+
             if (document == null) {
+
                 document = new Document(PageSize.LETTER, 25f, 25f, 40f, 0f); // PORTRAIT
-                //document = new Document(PageSize.LETTER.rotate(), 10f, 10f, 10f, 0f); ---- LANDSCAPE
-                if(PDFfileName == null) {
+                //openDocument();
+
+                if (PDFfileName == null) {
                     System.out.println("********* PDFfileName is NULL!!!!!");
                 } else
                     System.out.println("PDFfileName is " + PDFfileName);
@@ -50,6 +54,12 @@ public class PDFWriter {
 
         }
 
+    }
+
+    public void openDocument() {
+        System.out.println("before doc open");
+        this.document.open();
+        System.out.println("after doc open");
     }
 
     public void closeDocument() {

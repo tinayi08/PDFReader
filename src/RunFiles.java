@@ -14,6 +14,7 @@ public class RunFiles {
     public RunFiles(String filePath, String reportMonth) throws Exception {
         String userName = System.getProperty("user.name");
         System.out.println("userName is " + userName);
+        //docReader.pdfReader()
         docReader = new DocumentReader(reportMonth);
         runProgram(filePath);
         //textFileWriter.reader.closePDFDoc();

@@ -16,7 +16,7 @@ public class DocumentReader {
     private String titleStr = "Site Monthly Report";
     private String reportMonth = "";
     private String warningText = "";
-    static private PDFWriter pdfWriter;
+    static public PDFWriter pdfWriter;
 
 
     public DocumentReader(String reportMonth) throws Exception {
@@ -24,8 +24,8 @@ public class DocumentReader {
         warningText = "Confidential";
         pdfDocName = writingPDFFilePath + reportMonth;
         //pdfDocName = writingPDFFilePath + reportMonth + "_NewFile.pdf";
+        //pdfWriter.openDocument();
         pdfWriter = new PDFWriter(pdfDocName, titleStr, reportMonth, warningText);
-
 
     }
 

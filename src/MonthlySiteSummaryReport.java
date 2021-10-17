@@ -237,8 +237,9 @@ public class MonthlySiteSummaryReport {
 			
 				if (chooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION) {
 					System.out.println("just found a save button press!!!!");
-					//workDirName = chooser.getCurrentDirectory().getAbsolutePath();
-					workDirName = chooser.getSelectedFile().getAbsolutePath();
+					workDirName = chooser.getCurrentDirectory().getAbsolutePath() + "/";
+					//workDirName = chooser.getSelectedFile().getAbsolutePath();
+
 					System.out.println("File Directory:" + workDirName);
 					textDirectorySelected.setText(workDirName);
 					JOptionPane.showMessageDialog(null, workDirName + " is selected");
