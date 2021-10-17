@@ -22,7 +22,8 @@ public class DocumentReader {
     public DocumentReader(String reportMonth) throws Exception {
         titleStr = titleStr + " for " + reportMonth;
         warningText = "Confidential";
-        pdfDocName = writingPDFFilePath + reportMonth;
+        //pdfDocName = writingPDFFilePath + reportMonth;
+        pdfDocName = writingPDFFilePath + reportMonth + ".pdf";
         //pdfDocName = writingPDFFilePath + reportMonth + "_NewFile.pdf";
         //pdfWriter.openDocument();
         pdfWriter = new PDFWriter(pdfDocName, titleStr, reportMonth, warningText);
